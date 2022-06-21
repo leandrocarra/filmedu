@@ -1,9 +1,13 @@
-
+import Home from './Pages/Home'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      teste
+      <Header />
+      <section className="wrapper">
+        <Home />
+      </section>
     </div>
   );
 }
