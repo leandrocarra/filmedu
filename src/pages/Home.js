@@ -1,5 +1,6 @@
 import React from 'react'
 import PosterCard from '../components/PosterCard'
+
 import '../style/home.scss'
 
 const Home = () => {
