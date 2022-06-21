@@ -1,13 +1,17 @@
 .card {
-  //border: 1px solid;
+  border: 1px solid;
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 230px;
+  height: 330px;
   perspective: 1000px;
   float: left;
-  :hover {
-    transform: rotateY(180deg);
-  }
+  margin: 0 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card:hover .card__inner {
+  transform: rotateY(180deg);
 }
 
 .card__inner {
@@ -18,9 +22,6 @@
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  :hover {
-    transform: rotateY(180deg);
-  }
 }
 
 .card__front,
@@ -37,46 +38,41 @@
 }
 
 .card__back {
-  background-color: #2980b9;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  opacity: .8;
+  height: 330px;
+  top: 0;
+  color: #151F42;
+  text-align: justify; 
+  padding: 8px;
+  z-index: 2;
+  line-height: 22px;
   transform: rotateY(180deg);
 }
 
 
-// .card__title {
-//   font-size: 12px;
-//   line-height: 20px;
-//   margin-bottom: 10px;
-// }
+.card__title {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
 
-// .card__votes {
-//   font-size: 12px;
-//   color: #747474;
-// }
+.card__votes {
+  font-size: 12px;
+  color: #747474;
+}
 
-// .card__ball {
-//   border-radius: 50%;
-//   padding: 10px;
-//   background-color: #5968D5;
-//   position: absolute;
-//   top: 10px;
-//   right: 20px;
-//   color: #151F42;
-//   font-size: 12px;
-//   font-weight: bold;
-//   box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
-// }
-
-// .card__description {
-//   position: absolute;
-//   width: 100%;
-//   background-color: #fff;
-//   opacity: .8;
-//   height: 330px;
-//   top: 0;
-//   left: -100%;
-//   color: #151F42;
-//   text-align: justify; 
-//   padding: 8px;
-//   z-index: 2;
-//   line-height: 22px;
-// }
+.card__ball {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #5968D5;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #151F42;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
+}
