@@ -19,6 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	box-sizing: border-box;
 	transition: all 0.233s 0s ease-in-out;
+	color: #fff;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -35,6 +36,5 @@ ol, ul {
 	list-style: none;
 }
 .wrapper {
-	margin-top: 110px;
 	padding: 16px;
 }

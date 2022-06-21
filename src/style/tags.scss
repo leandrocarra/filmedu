@@ -1,0 +1,24 @@
+.tags__main {
+  padding: 16px;
+  margin: 130px 10px 0px 15px;
+  overflow: hidden;
+  ul {
+    li {
+      float: left;
+      margin-right: 10px;
+      border-radius: 50px;
+      padding:5px 10px;
+      border: .5px solid;
+      cursor: pointer;      
+    }
+    :hover {
+      background-color: rgba(89,104,213, .3);
+    }
+  }
+}
+
+.tags__divisor {
+  border-top: 1px solid #a7a7a7;
+  display: block;
+  margin: 10px 0;
+}
