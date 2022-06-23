@@ -1,18 +1,24 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
  
-const HeaderDetail = () => {
+const HeaderDetail = ({
+  title,
+  vote,
+  date,
+  site,
+  runtime
+}) => {
   return (
     <div className="detail__header">
-      <h2 className="detail__title">Avengers: Infinity War</h2>
+      <h2 className="detail__title">{title}</h2>
       <div className="detail__rateStar">
-        <span>9.0</span>
+        <span>{vote}</span>
         <i><AiFillStar /></i>
       </div>
       <div className="detail__time">
-        <p> 2018 |</p> 
-        <p> 2h 35min |</p> 
-        <p> 16+</p>
+        <p> {date}</p> 
+        <p> {site}</p> 
+        <p> {runtime}min</p>
       </div>
     </div>
   );

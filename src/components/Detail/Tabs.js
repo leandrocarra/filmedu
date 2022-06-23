@@ -1,7 +1,10 @@
 import React from 'react'
  
-const Tabs = () => {
-
+const Tabs = ({
+  description,
+  status,
+  company
+}) => {
   function openTab(tabName) {
     let i;
     let x = document.getElementsByClassName("tabs");
@@ -41,20 +44,28 @@ const Tabs = () => {
       </div>
 
       <div id="tabOne" className="tabs">
-        <p>Professor Albus Dumbledore knows the powerful, dark wizard Gellert 
-          Grindelwald is moving to seize control of the wizarding world. Unable 
-          to stop him alone, he entrusts magizoologist Newt Scamander to lead an 
-          intrepid team of wizards and witches. They soon encounter an array of old 
-          and new beasts as they clash with Grindelwald's growing legion of followers.</p>
+        <p>{description}</p>
         <div className="details__block">
+            {company && company.map((name, index)=>{
+              if (index >= 2) {
+                return
+              }
+              return(
+                <div
+                  className="details__feature"
+                  key={index}
+                >                 
+                  <p>{
+                    index === 1 
+                    ? 'Produtor'
+                    : 'Empresa'
+                  } </p>
+                  <span>{name.name}</span>
+                </div>
+                )
+            })}
           <div className="details__feature">
-            <p>Estrelando: </p> <span>werwerw</span>
-          </div>
-          <div className="details__feature">
-            <p>Criado por: </p> <span>werwer</span>
-          </div>
-          <div className="details__feature">
-            <p>Genero: </p> <span>werewr</span>
+            <p>Status</p> <span>{status}</span>
           </div>
         </div>
       </div>

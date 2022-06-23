@@ -1,23 +1,40 @@
-import React from 'react'
-import BigPicture from './BigPicture';
-import Content from './Content';
+import React, {useEffect} from 'react'
+import BigPicture from './BigPicture'
+import Loading from '../Loading'
+import Content from './Content'
+import {useParams} from 'react-router-dom'
+import { useDetail } from '../../context/DetailContext'
 
 import '../../style/detail.scss'
  
 const Detail = () => {
-  const bgPicture = "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/wvdWb5kTQipdMDqCclC6Y3zr4j3.jpg"
+  const params = useParams()
+  const {
+    detailMovie,
+    loading,
+    movie,
+    error
+  } = useDetail()
+   console.log(movie);
+  
+  useEffect(() => {
+    detailMovie(params.movieId)
+  },[])
+  
   return (
     <section className="detail__main">
-      {/* <span
-        className="detail__blur" 
-        style={{
-        backgroundImage: `url("${bgPicture}")`,
-        
-      }}>
-
-      </span> */}
-      <BigPicture />
-      <Content />
+      {loading && <Loading />}
+      {!error 
+        ? (
+          <>
+            <BigPicture
+              picture={movie.poster_path}
+            />
+            <Content {...movie}/>
+          </>
+        )
+        : console.log('érror',error)
+      }
     </section>
   );
 }

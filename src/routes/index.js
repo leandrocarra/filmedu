@@ -11,7 +11,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/detail" component={Detail} />
+      <Route path="/detail/:movieId" component={Detail} />
       {/* <Route path="/" component={() => <h1>404</h1>} /> */}
     </Switch>
   );
