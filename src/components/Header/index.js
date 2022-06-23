@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Search from '../Search'
 import FilmeduLogo from '../../assets/icons/filmeduLogo'
+import SearchProvider from '../../context/SearchContext'
 import '../../style/header.scss'
  
 const Header = () => {
@@ -28,7 +29,9 @@ const Header = () => {
         </ul>
       </div>
       <div className="header__search">
-        <Search />
+        <SearchProvider>
+          <Search />
+        </SearchProvider>
       </div>      
     </div>
   );

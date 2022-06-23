@@ -5,6 +5,7 @@ import Route from './Routes';
 
 import Home from '../pages/Home'
 import Detail from '../pages/Detail'
+import SearchResult from '../pages/SearchResult'
 
 
 export default function Routes() {
@@ -12,6 +13,7 @@ export default function Routes() {
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/detail/:movieId" component={Detail} />
+      <Route path="/result/:query" component={SearchResult} />
       {/* <Route path="/" component={() => <h1>404</h1>} /> */}
     </Switch>
   );

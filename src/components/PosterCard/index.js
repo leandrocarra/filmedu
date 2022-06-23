@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import '../../style/posterCard.scss'
  
 const PosterCard = (movie) => {
-  console.log('dentro', movie);
   const posterPath = movie.poster_path
   const posterBack = movie.backdrop_path
 

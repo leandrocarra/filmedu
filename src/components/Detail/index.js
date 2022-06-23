@@ -15,7 +15,6 @@ const Detail = () => {
     movie,
     error
   } = useDetail()
-   console.log(movie);
   
   useEffect(() => {
     detailMovie(params.movieId)
