@@ -29,7 +29,7 @@ const Search = () => {
       <GoSearch className='search__icon'/>
       <input
         type="text"
-        placeholder='Pesquise por um filme'
+        placeholder='Buscar'
         onChange={debouncedChangeHandler}
       />
       { redirect && query !== ''

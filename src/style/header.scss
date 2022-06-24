@@ -1,22 +1,22 @@
 .header {
-  height: 130px;
+  height: 95px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  padding: 16px;
+  max-width: 1200px;
+  padding: 16px 0;
   color: #000;
   border-radius: 0px 0px 5px 5px;
   opacity: 1;
   color: #7f7e7e;
-  background-color: #000;
   overflow: hidden;
   z-index: 10;
+  margin: 0 auto;
 }
 
 .header__logo {
-  width: 100px;
+  margin-top: 10px;
   float: left;
 }
 
@@ -36,10 +36,18 @@
 
 .header__search {
   float: right;
-  width: 30%;
-  margin-top: 27px;
+  width: 15%;
+  margin-top: 12px;
+  border: 1px solid #FFF;
+  border-radius: 4px;
 }
 
 .header__active {
   color: #fff;
+}
+
+.header__smile {
+  float: right;
+  margin-top: 10px;
+  margin-left: 10px;
 }

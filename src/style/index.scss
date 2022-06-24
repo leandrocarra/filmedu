@@ -29,17 +29,18 @@ body {
 	line-height: 1;
 	background-color: #000;
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
 }
 .wrapper {
-	padding: 16px;
-	margin-top: 160px;
+	margin: 0 auto;
+	margin-top: 120px;
+	max-width: 1230px;
+	padding-bottom: 80px;
 }
-
 
 .lds-ring {
 	display: inline-block;
@@ -93,4 +94,25 @@ ol, ul {
 	justify-content: center;
 	align-items: center;
 	z-index: 10000;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F2077C #F2077C;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+	height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #565656;
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #F2077C;
+  border-radius: 20px;
+  border: 3px solid #F2077C;
 }

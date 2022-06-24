@@ -12,6 +12,7 @@ export default function DetailProvider({ children }) {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
   const [movie, setMovie] = useState([])
+  const [recomendationList, setRecomendationList] = useState([])
 
     const detailMovie = (id) => {
       setLoading(true)
@@ -27,12 +28,28 @@ export default function DetailProvider({ children }) {
       setLoading(false)
     }, [])
 
+    const getRecomendation = (id) => {
+      setLoading(true)
+
+      service.detail
+        .recomendation(id)
+        .then(setRecomendationList)
+        .catch(setError)
+        .finally(() => setLoading(false))
+    }
+
+    useEffect(() => {
+      setLoading(false)
+    }, [])
+
   return (
     <DetailContext.Provider
       value={{
         loading,
         detailMovie,
         movie,
+        getRecomendation,
+        recomendationList,
         error
       }}>
       {children}
@@ -46,6 +63,8 @@ export function useDetail() {
     loading,
     detailMovie,
     movie,
+    getRecomendation,
+    recomendationList,
     error
   } = context;
 
@@ -53,6 +72,8 @@ export function useDetail() {
     loading,
     detailMovie,
     movie,
+    getRecomendation,
+    recomendationList,
     error
    };
 }

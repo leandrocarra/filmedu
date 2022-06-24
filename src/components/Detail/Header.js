@@ -1,24 +1,37 @@
 import React from 'react'
-import { AiFillStar } from 'react-icons/ai'
- 
+import {IoAddCircleSharp} from 'react-icons/io5' 
 const HeaderDetail = ({
   title,
   vote,
   date,
-  site,
-  runtime
+  runtime,
+  description
 }) => {
   return (
     <div className="detail__header">
+      <p>FILMES</p>
       <h2 className="detail__title">{title}</h2>
-      <div className="detail__rateStar">
-        <span>{vote}</span>
-        <i><AiFillStar /></i>
-      </div>
-      <div className="detail__time">
-        <p> {date}</p> 
-        <p> {site}</p> 
-        <p> {runtime}min</p>
+      <ul className="detail__ratch">
+        <li>{runtime}min</li>
+        <li>{vote}/10</li>
+        <li>{date}</li>
+      </ul>
+      <span className="detail__underTitle">
+        {description
+          ? description
+          : 'Não temos a descrição desse filme para lhe mostrar, sorry =('
+        }
+      </span>
+      <div className="detail__button">
+        <button className="detail__button--watch">
+          Assistir
+        </button>
+        <button className="detail__button--add">
+          <i>
+            <IoAddCircleSharp />
+          </i>
+          <small>Add my playlist</small>
+        </button>
       </div>
     </div>
   );

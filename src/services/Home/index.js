@@ -14,14 +14,42 @@ async function getMovies() {
   })
 }
 
-async function getGenres() {
+async function topRated() {
   return new Promise(async (resolve, reject) => {
     try {
-      const { data } = await api.get(`/genre/movie/list?language=pt-BR`)
+      const { data } = await api.get(`/movie/top_rated?language=pt-BR`)
       resolve(data)
     } catch (error) {
       reject({
-        message: 'Não possível listar os generos',
+        message: 'Não possível listar os filmes',
+        detail: error
+      })
+    }
+  })
+}
+
+async function nowPlaying() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const { data } = await api.get(`/movie/now_playing?language=pt-BR`)
+      resolve(data)
+    } catch (error) {
+      reject({
+        message: 'Não possível listar os filmes',
+        detail: error
+      })
+    }
+  })
+}
+
+async function upcoming() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const { data } = await api.get(`/movie/upcoming?language=pt-BR`)
+      resolve(data)
+    } catch (error) {
+      reject({
+        message: 'Não possível listar os filmes',
         detail: error
       })
     }
@@ -30,5 +58,7 @@ async function getGenres() {
 
 export default {
   getMovies,
-  getGenres
+  topRated,
+  nowPlaying,
+  upcoming
 }

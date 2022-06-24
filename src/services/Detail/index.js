@@ -14,6 +14,21 @@ async function detailMovie(id) {
   })
 }
 
+async function recomendation(id) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const { data } = await api.get(`movie/${id}/recommendations?&language=pt-BR&page=1`)
+      resolve(data)
+    } catch (error) {
+      reject({
+        message: 'Não possível pegar recomendações',
+        detail: error
+      })
+    }
+  })
+}
+
 export default {
-  detailMovie
+  detailMovie,
+  recomendation
 }

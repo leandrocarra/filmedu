@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Search from '../Search'
 import FilmeduLogo from '../../assets/icons/filmeduLogo'
+import Smile from '../../assets/icons/smile'
 import SearchProvider from '../../context/SearchContext'
 import '../../style/header.scss'
  
@@ -13,26 +14,14 @@ const Header = () => {
           <FilmeduLogo />
         </Link>
       </i>
-      <div className="header__menus">
-        <ul>         
-          <li className="header__active">Popular</li>
-          <li>
-            <Link to="/detail">
-              Guia manual
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              home
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <i className="header__smile">
+        <Smile />
+      </i> 
       <div className="header__search">
         <SearchProvider>
           <Search />
         </SearchProvider>
-      </div>      
+      </div>    
     </div>
   );
 }

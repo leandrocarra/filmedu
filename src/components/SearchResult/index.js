@@ -30,6 +30,8 @@ const SearchResult = () => {
     //setData(searchResult.results)
   },[params.query])
 
+  console.log('em', empty);
+
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
@@ -42,7 +44,7 @@ const SearchResult = () => {
     <div>
       {loading && <Loading />}
       { empty
-        ? <h1>vazio</h1>
+        ? <h1>NENHUM RESULTADO</h1>
         : <>
             {searchResult.results && searchResult.results.map((item)=> {
               return (

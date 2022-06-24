@@ -8,8 +8,6 @@ const BigPicture = ({picture}) => {
         alt="grande"
         className="detail__bigPicture"
       />
-      <span className="detail__shadow"></span>
-      <span className="detail__shadow--inverter"></span>
     </div>
   );
 }

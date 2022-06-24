@@ -12,6 +12,9 @@ export default function HomeProvider({ children }) {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
   const [movieList, setMovieList] = useState([])
+  const [topList, setTopList] = useState([])
+  const [nowPlayingList, setNowPlayingList] = useState([])
+  const [upcomingList, setUpcomingList] = useState([])
 
     const getMovieList = () => {
       setLoading(true)
@@ -23,6 +26,36 @@ export default function HomeProvider({ children }) {
         .finally(() => setLoading(false))
     }
 
+    const getTopMovies = () => {
+      setLoading(true)
+
+      service.home
+        .topRated()
+        .then(setTopList)
+        .catch(setError)
+        .finally(() => setLoading(false))
+    }
+
+    const getNowPlaying = () => {
+      setLoading(true)
+
+      service.home
+        .nowPlaying()
+        .then(setNowPlayingList)
+        .catch(setError)
+        .finally(() => setLoading(false))
+    }
+
+    const getUpcoming = () => {
+      setLoading(true)
+
+      service.home
+        .upcoming()
+        .then(setUpcomingList)
+        .catch(setError)
+        .finally(() => setLoading(false))
+    }
+
     useEffect(() => {
       setLoading(false)
     }, [])
@@ -30,10 +63,16 @@ export default function HomeProvider({ children }) {
   return (
     <HomeContext.Provider
       value={{
-        loading,
+        loading,       
+        error,
         getMovieList,
+        getTopMovies,
+        getNowPlaying,
+        getUpcoming,
         movieList,
-        error
+        topList,
+        nowPlayingList,
+        upcomingList
       }}>
       {children}
     </HomeContext.Provider>
@@ -43,16 +82,28 @@ export default function HomeProvider({ children }) {
 export function useHome() {
   const context = useContext(HomeContext);
   const {
-    loading,
+    loading,       
+    error,
     getMovieList,
+    getTopMovies,
+    getNowPlaying,
+    getUpcoming,
     movieList,
-    error
+    topList,
+    nowPlayingList,
+    upcomingList
   } = context;
 
   return {
-    loading,
+    loading,       
+    error,
     getMovieList,
+    getTopMovies,
+    getNowPlaying,
+    getUpcoming,
     movieList,
-    error
+    topList,
+    nowPlayingList,
+    upcomingList
    };
 }

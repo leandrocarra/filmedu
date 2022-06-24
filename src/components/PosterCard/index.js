@@ -34,21 +34,12 @@ const PosterCard = (movie) => {
             </ul>
             <span className="card__ball">{movie.vote_average}</span>
           </div>
-          <div className="card__back">
-          {posterBack
-            ? <img 
-                src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${posterBack}`}
-                className="card__image"
-                alt={movie.title}
-              />
-            : <img 
-                src={`https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg`}
-                className="card__image"
-                alt={movie.title}
-              />
-            }
+          <div className="card__back">         
             <p className="card__description">
-              {movie.overview}
+              {movie.overview
+                ? movie.overview
+                : 'Não temos a descrição desse filme para lhe mostrar, sorry.'
+              }
             </p>
             <ul className="card__backTitle">
               <li className="card__title">
