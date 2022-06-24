@@ -2,23 +2,18 @@ import React, {useEffect, useState, useMemo} from 'react'
 import {useParams} from 'react-router-dom'
 import PosterCard from '../PosterCard'
 import Pagination from '../Pagination'
+import Loading from '../Loading'
+import data from '../mock-data.json'
 
 import { useSearch } from '../../context/SearchContext'
 
 const SearchResult = () => {
   const params = useParams()
   const [empty, setEmpty] = useState(false)
-  const [data, setData] = useState([])
+  //const [data, setData] = useState([])
+  const [currentPage, setCurrentPage] = useState(1);
   let PageSize = 10;
 
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const currentTableData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
-    return data.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
-  
   const {
     search,
     searchResult,
@@ -32,13 +27,20 @@ const SearchResult = () => {
     }else{
       setEmpty(false)
     }
-    setData(searchResult.results)
+    //setData(searchResult.results)
   },[params.query])
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return data.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage]);
 
   console.log(searchResult);
 
   return (
     <div>
+      {loading && <Loading />}
       { empty
         ? <h1>vazio</h1>
         : <>
