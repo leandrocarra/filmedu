@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/filmedu/static/css/main.0ab37b82.css",
+    "main.js": "/filmedu/static/js/main.7267819a.js",
+    "index.html": "/filmedu/index.html",
+    "main.0ab37b82.css.map": "/filmedu/static/css/main.0ab37b82.css.map",
+    "main.7267819a.js.map": "/filmedu/static/js/main.7267819a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ab37b82.css",
+    "static/js/main.7267819a.js"
+  ]
+}
