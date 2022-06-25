@@ -21,8 +21,6 @@ const Detail = () => {
     detailMovie(params.movieId)
   },[params.movieId])
 
-  console.log(movie);
-  
   return (
     <section className="detail__main">
       <span

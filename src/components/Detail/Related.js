@@ -15,8 +15,6 @@ const Related = ({id}) => {
     getRecomendation(id)
   },[params.movieId])
 
-  console.log(recomendationList);
-  
   return (
     <div className="detail__relatedWrapper">
       {recomendationList?.results?.length === 0

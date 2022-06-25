@@ -52,6 +52,8 @@ O <b>FILMEDU</b> veio para revolucionar o mercado de streaming atual, atingindo 
 
 ## 🎨 Layout
 
+Pode se ver o prototipo que desenhei aqui nesse [Figma](https://www.figma.com/file/TklMiTsASkmwWIvFAJvCw4/Logo-FILMEDU?node-id=0%3A1)
+
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
