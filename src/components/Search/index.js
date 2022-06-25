@@ -33,7 +33,7 @@ const Search = () => {
         onChange={debouncedChangeHandler}
       />
       { redirect && query !== ''
-        ? <Redirect to={`/result/${query}`} />
+        ? <Redirect to={`/result/${query}/1`} />
         : null
       } 
     </div>

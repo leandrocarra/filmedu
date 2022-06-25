@@ -3,16 +3,15 @@ import {useParams} from 'react-router-dom'
 import PosterCard from '../PosterCard'
 import Pagination from '../Pagination'
 import Loading from '../Loading'
-import data from '../mock-data.json'
+import data from '../Pagination/test.json'
 
 import { useSearch } from '../../context/SearchContext'
 
 const SearchResult = () => {
   const params = useParams()
   const [empty, setEmpty] = useState(false)
-  //const [data, setData] = useState([])
   const [currentPage, setCurrentPage] = useState(1);
-  let PageSize = 10;
+  let PageSize = 20;
 
   const {
     search,
@@ -21,24 +20,23 @@ const SearchResult = () => {
   } = useSearch()
 
   useEffect(() => {
-    search(params.query)
+    search(params.query, params.page)
     if(searchResult?.results?.length === 0) {
       setEmpty(true)
     }else{
       setEmpty(false)
     }
-    //setData(searchResult.results)
   },[params.query])
 
-  console.log('em', empty);
+  useEffect(() => {
+    search(params.query, currentPage)
+  },[currentPage])
 
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
-
-  console.log(searchResult);
 
   return (
     <div>

@@ -13,7 +13,7 @@ export default function Routes() {
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/detail/:movieId" component={Detail} />
-      <Route path="/result/:query" component={SearchResult} />
+      <Route path="/result/:query/:page" component={SearchResult} />
       {/* <Route path="/" component={() => <h1>404</h1>} /> */}
     </Switch>
   );

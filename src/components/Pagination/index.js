@@ -1,7 +1,7 @@
-import React from 'react';
-import classnames from 'classnames';
-import { usePagination, DOTS } from '../hooks/usePagination';
-import './pagination.scss';
+import React from 'react'
+import classnames from 'classnames'
+import { usePagination, DOTS } from '../../hooks/usePagination'
+import '../../style/pagination.scss'
 const Pagination = props => {
   const {
     onPageChange,
@@ -18,6 +18,7 @@ const Pagination = props => {
     siblingCount,
     pageSize
   });
+ 
 
   if (currentPage === 0 || paginationRange.length < 2) {
     return null;
@@ -72,4 +73,4 @@ const Pagination = props => {
   );
 };
 
-export default Pagination;
+export default Pagination
