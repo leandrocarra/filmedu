@@ -20,3 +20,12 @@
   top: 3px;
   color: #fff;
 }
+
+@media screen and (max-width: 500px) {
+  .search__detail {
+    .card {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}

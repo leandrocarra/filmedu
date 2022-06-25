@@ -6,6 +6,7 @@ import Loading from '../Loading'
 import data from '../Pagination/test.json'
 
 import { useSearch } from '../../context/SearchContext'
+import '../../style/search.scss'
 
 const SearchResult = () => {
   const params = useParams()
@@ -39,7 +40,7 @@ const SearchResult = () => {
   }, [currentPage]);
 
   return (
-    <div>
+    <div className='search__detail'>
       {loading && <Loading />}
       { empty
         ? <h1>NENHUM RESULTADO</h1>

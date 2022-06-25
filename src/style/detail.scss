@@ -244,3 +244,33 @@
     position: relative;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .detail__main {
+    padding: 0 4px;
+  }
+  .detail__bigImage {
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+    left: 50%;
+    margin-left: -116px;
+  }
+  .detail__bigPicture {
+    min-width: inherit;
+    max-width: 236px;
+  }
+  .detail__content {
+    margin-left: 0;
+    clear: both;
+  }
+  .detail__ratch li {
+    margin-right: 30px;
+  }
+  .detail__header {
+    height: 530px;
+  }
+  .detail__relatedWrapper {
+    margin-bottom: 60px;
+  }
+}
