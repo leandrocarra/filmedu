@@ -140,25 +140,10 @@ $ yarn test:coverage
 
 ## :cloud: Disponivel na web
 
-O Wallet também disponivel na web, para encontra-lo basta acessar o seguinte
+O FILMEDU também disponivel na web, para encontra-lo basta acessar o seguinte
 endereço na web:
 
-[Site Wallet](https://web-wallet.herokuapp.com/)
-
----
-
-## :cyclone: Coveralls
-
-Pensado como forma de garantir qualidade no desenvolvimento, o wallet possui integração
-continua com o <b>Coveralls</b>. Ele é uma ferramenta de qualidade de codigo utilizada para
-visualização forma mais completa o codigo distribuido para master.
-
-[Coveralls Wallet](https://coveralls.io/github/hyankelwin/wallet)
-
-[Image](https://drive.google.com/file/d/1DYQKa9Du3a-9gp5Y29vNwg8LkrlZCYyk/view?usp=sharing)
-
-💡 Esta imagem foi inserida acima para caso houver algum problema com acesso ao
-coveralls
+[Site filmedu](https://leandrocarra.github.io/filmedu//)
 
 ---
 
@@ -166,28 +151,29 @@ coveralls
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Wallet** ([React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/))
+#### **Filmedu** ([React](https://reactjs.org/))
 
 - **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 - **[React Icons](https://react-icons.github.io/react-icons/)**
+- **[SCSS](https://sass-lang.com/)**
+- **[Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)**
+- **[Axios](https://axios-http.com/ptbr/docs/intro)**
+- **[Loadash](https://lodash.com/)**
 - **[Jest](https://jestjs.io/)**
 - **[Eslint](https://eslint.org/)**
 - **[Prettier](https://prettier.io/)**
 - **[GitHub Actions](https://docs.github.com/pt/actions)**
-- **[Coveralls](https://coveralls.io/)**
-- **[Commitlint](https://commitlint.js.org/#/)**
-- **[Styled Components](https://styled-components.com/)**
-- **[Husky Lint](https://typicode.github.io/husky/#/)**
 - **[Yarn](https://yarnpkg.com/)**
 - **[Yup](https://github.com/jquense/yup)**
+- **[ContextApi](https://pt-br.reactjs.org/docs/context.html)**
 
-> Veja o arquivo [package.json](https://github.com/hyankelwin/wallet/blob/main/package.json)
+> Veja o arquivo [package.json](https://github.com/leandrocarra/filmedu/blob/main/package.json)
 
 ## 👨‍💻 Contribuidores
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/hyankelwin"><img style="border-radius: 50%;" src="https://gitlab.com/uploads/-/system/user/avatar/9851036/avatar.png" width="100px;" alt=""/><br /><sub><b>Hyan Kelwin</b></sub></a><br /><a href="https://github.com/hyankelwin" >👨‍🚀</a></td>
+    <td align="center"><a href="https://github.com/leandrocarra"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/6805211?v=4" width="100px;" alt=""/><br /><sub><b>Leandro Carra</b></sub></a><br /><a href="https://github.com/leandrocarra" >👨‍🚀</a></td>
   </tr>
 </table>
 
@@ -205,10 +191,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Desenvolvedor apaixonado por programação e tecnologias.
 
-<a href="https://github.com/hyankelwin">
- <img style="border-radius: 50%;" src="https://gitlab.com/uploads/-/system/user/avatar/9851036/avatar.png" width="100px;" alt=""/>
+<a href="https://github.com/leandrocarra">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/6805211?v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Hyan Kelwin</b></sub></a> <a href="https://github.com/hyankelwin" title="GitHub Hyan">🚀</a>
+ <sub><b>Leandro Carra</b></sub></a> <a href="https://github.com/leandrocarra" title="GitHub leandro">🚀</a>
  <br />
 
 ---
