@@ -23,6 +23,9 @@
  <a href="#-contribuidores">Contribuidores</a>
 </p>
 <p>
+ <a href="#-considerações">Considerações</a>
+</p>
+<p>
  <a href="#-autor">Autor</a>
 </p>
 
@@ -139,7 +142,7 @@ $ yarn test:coverage
 ```
 
 --- -->
-
+<!-- 
 ## :cloud: Disponivel na web
 
 O FILMEDU também disponivel na web, para encontra-lo basta acessar o seguinte
@@ -147,7 +150,7 @@ endereço na web:
 
 [Site filmedu](https://leandrocarra.github.io/filmedu//)
 
----
+--- -->
 
 ## 🛠 Tecnologias
 
@@ -170,6 +173,20 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - **[ContextApi](https://pt-br.reactjs.org/docs/context.html)**
 
 > Veja o arquivo [package.json](https://github.com/leandrocarra/filmedu/blob/main/package.json)
+
+---
+
+## 👨‍💻 Considerações
+
+* Optei por não usar Redux nesse projeto, pelo fato de contextApi estar substituindo aos poucos o redux.
+* Infelizmente não consegui realizar os testes, pois meu filho pegou conjuntivite e fiquei sem tempo devido ao prazo.
+* Optei por utilizar o Scss ao invez de Styled Components, pensando em criar uma lib para esse projeto num futuro proximo, pois o mesmo poderia ser usado em outras linguages
+* Estarei colocando em produção em breve, mas primeiro vou pegar com vcs a permissão para isso, não são todas as empresas que permitem.
+* O repo ficará publico por 1 semana, devido a ser um teste, não seria interessante o git indexar.
+* Mesmo não sendo requisito, fiz o site responsivo.
+* Mesmo não sendo requisito criar uma identidade para o teste, podem ver nesse [link](https://www.figma.com/file/TklMiTsASkmwWIvFAJvCw4/Logo-FILMEDU?node-id=0%3A1)
+
+---
 
 ## 👨‍💻 Contribuidores
 
