@@ -63,7 +63,7 @@ O <b>FILMEDU</b> veio para revolucionar o mercado de streaming atual, atingindo 
 ### Mobile
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="home" title="#home" src="./src/compound/homeMobile.png" width="100%">
+  <img alt="home" title="#home" src="./src/compound/homeMobile.png" width="250px">
   <img alt="home-fill" title="#home-fill" src="./src/compound/detailMobile.png" width="250px">
 </p>
 
